@@ -1,47 +1,46 @@
 import Receta from "../database/models/receta.js";
 
-export const listarProductos = async (req, res) => {
+export const listarRecetas = async (req, res) => {
   try {
     // *Buscar Productos
-    const resultado = await Producto.find();
+    const resultado = await Receta.find();
 
     // devolver los productos
     res.status(200).json(resultado);
   } catch (error) {
     console.error(error);
     res.status(404).json({
-      message: "No se pudo obtener los datos",
+      message: "No se pudo obtener los datos (error 404)",
     });
   }
-  console.log("Hola mundo desde el controlador");
 
 };
 
-// export const agregarProducto = async (req, res) => {
-//   try {
-//     //extraer datos del body:
-//     console.log(req.body);
+export const agregarReceta = async (req, res) => {
+  try {
+    
+    console.log(req.body);
 
-//     //todo: validar los datos antes de crear
+    //todo: validar los datos antes de crear
 
-//     //crear producto nuevo
-//     const nuevoProducto = new Producto(req.body);
+    //crear producto nuevo
+    const nuevaReceta = new Receta(req.body);
 
-//     //pedirle a la DB que guarde el producto nuevo
-//     const producto_a_guardar = await nuevoProducto.save();
+    //pedirle a la DB que guarde el producto nuevo
+    const receta_a_guardar = await nuevaReceta.save();
 
-//     //enviar la respuesta al frontend
-//     res.status(201).json({
-//       producto: producto_a_guardar,
-//       mensaje: "El producto fue guardado correctamente",
-//     });
-//   } catch (error) {
-//     console.error(error);
-//     res.status(400).json({
-//       mensage: "El producto no tiene el formato adecuado (bad request)",
-//     });
-//   }
-// };
+    //enviar la respuesta al frontend
+    res.status(201).json({
+      producto: receta_a_guardar,
+      mensaje: "La receta fue guardada correctamente",
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(400).json({
+      mensage: "La receta no tiene el formato adecuado (error 400)",
+    });
+  }
+};
 
 // export const listarProductoPorId = async (req, res) => {
 //   try {

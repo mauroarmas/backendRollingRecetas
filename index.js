@@ -4,7 +4,7 @@ import morgan from 'morgan';
 import 'dotenv/config'; //permite procesar variables de entorno
 import path from "path"
 import { fileURLToPath } from 'url';
-import routerRecetas from './src/routes/productos.recetas.js';
+import routerRecetas from './src/routes/recetas.routes.js';
 import './src/database/database.js'
 
 //1° Configurar un puerto
