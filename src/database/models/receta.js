@@ -56,4 +56,4 @@ const recetaEsquema = new Schema({
 // * DOCUMENTO: Dato en sí, que posee un id y todas las propiedades del esquema (Ej: Un producto)
 const Receta = mongoose.model("receta", recetaEsquema);
 
-export default Producto;
+export default Receta;
