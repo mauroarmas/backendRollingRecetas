@@ -4,7 +4,7 @@ import morgan from 'morgan';
 import 'dotenv/config'; //permite procesar variables de entorno
 import path from "path"
 import { fileURLToPath } from 'url';
-import routerProductos from './src/routes/productos.routes.js';
+import routerRecetas from './src/routes/productos.recetas.js';
 import './src/database/database.js'
 
 //1° Configurar un puerto
@@ -34,4 +34,4 @@ app.use(express.static(__publicname)) //se carga en la raíz del servidor (ruta 
 
 //3° Configuracion de las rutas 
 
-app.use("/api", routerProductos)
+app.use("/api", routerRecetas)
