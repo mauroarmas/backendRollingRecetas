@@ -1,19 +1,13 @@
 import mongoose, { Schema } from "mongoose";
 
 // * ESQUEMA: Estructura que yo pretendo almacenar en la DB (Molde, algo así como una tabla)
-const productoEsquema = new Schema({ 
+const recetaEsquema = new Schema({ 
   nombre: {
     type: String,
     required: true,
     minLength: 2,
     maxLength: 30,
     unique: true,
-  },
-  precio: {
-    type: Number,
-    required: true,
-    min: 100,
-    max: 1000000,
   },
   imagen: {
     type: String,
@@ -44,10 +38,15 @@ const productoEsquema = new Schema({
     minLength: 10,
     maxLength: 1000,
   },
-  disponible: {
-    type: Boolean,
-    required: true,
+  pasos: {
+    type: Array,
+    required: true
+  },
+  ingredientes: {
+    type: Array,
+    required: true
   }
+
 });
 
 // generar modelo en base al schema, se la enuncia cómo una clase (Singular y con mayus), esto es cómo una tabla SQL
@@ -55,6 +54,6 @@ const productoEsquema = new Schema({
 
 // * MODELO: Con el esquema de datos se crea el modelo, que es la representación de todos los documentos en la DB (Colección)
 // * DOCUMENTO: Dato en sí, que posee un id y todas las propiedades del esquema (Ej: Un producto)
-const Producto = mongoose.model("producto", productoEsquema); 
+const Receta = mongoose.model("receta", recetaEsquema);
 
 export default Producto;
