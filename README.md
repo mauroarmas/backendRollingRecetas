@@ -1,38 +1,35 @@
-# Ejercicio 14 del Trabajo Práctico de React ⚛ RollingCodeSchool <>
+# Backend de Rolling Recetas <>
 
-Se realizo la página rolling Recetas, donde se muestras distintos platos de comida... Con una sección de administrador para agregar distintas recetas de comida, con su imagen pasos ingredientes, etc.
+En este repositorio está almacenado toda la logica del backend del proyecto rolling recetas, este está almacenado en Vercel:
+<br/>
+<a href="https://github.com/mauroarms/backendRollingRecetas">
+    <img src="https://img.shields.io/badge/rolling recetas-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" width="160" height="30">
+</a>
 
 # Vista Previa
 
-![image](https://github.com/mauroarms/rollingRecetas/assets/95541436/cb11bcc9-377a-4f90-aaea-128e36ae6e5d)
+![imagen](https://github.com/mauroarms/backendRollingRecetas/assets/95541436/539e070a-d8d8-4465-95db-de5a66c08e9b)
 
+# Tecnologias Empleadas
+<br/>
+<div>
+      <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript" width="160" height="40">
+  <br/>
+      <img src="https://img.shields.io/badge/Node%20JS-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node" width="160" height="40">
+  <br/>
+      <img src="https://img.shields.io/badge/Express%20JS-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" width="160" height="40">
+    <br/>  
+      <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" width="160" height="40">
+     <br/> 
+      <img src="https://img.shields.io/badge/mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white" alt="Mongoose" width="160" height="40">
+   <br/>   
+      <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="GIT" width="160" height="40">
+    <br/>  
+      <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="vercel" width="160" height="40">
+</div>
+<br/>
 
-
-## Tecnologias
-
-<ul>
-  <li>
-    <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript" width="120" height="30">
-  </li>
-  <li>
-    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" width="100" height="30">
-  </li>
-  <li>
-    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" width="100" height="30">
-  </li>
-  <li>
-    <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" width="120" height="30">
-  </li>
-  <li>
-    <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="GIT" width="100" height="30">
-  </li>
-  <li>
-    <img src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge" alt="GIT" width="100" height="30">
-  </li>
-</ul>
-
-
-## Autor
+# Autor
 
 *Armas Mauro Nahuel*
 
