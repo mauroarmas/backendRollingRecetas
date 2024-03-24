@@ -2,10 +2,8 @@ import Receta from "../database/models/receta.js";
 
 export const listarRecetas = async (req, res) => {
   try {
-    // *Buscar Productos
     const resultado = await Receta.find();
 
-    // devolver los productos
     res.status(200).json(resultado);
   } catch (error) {
     console.error(error);
@@ -21,15 +19,10 @@ export const agregarReceta = async (req, res) => {
     
     console.log(req.body);
 
-    //todo: validar los datos antes de crear
-
-    //crear producto nuevo
     const nuevaReceta = new Receta(req.body);
 
-    //pedirle a la DB que guarde el producto nuevo
     const receta_a_guardar = await nuevaReceta.save();
 
-    //enviar la respuesta al frontend
     res.status(201).json({
       producto: receta_a_guardar,
       mensaje: "La receta fue guardada correctamente",
@@ -42,23 +35,21 @@ export const agregarReceta = async (req, res) => {
   }
 };
 
-// export const listarProductoPorId = async (req, res) => {
-//   try {
-//     //extraer producto id
-//     console.log(req.params);
+export const listarRecetaPorId = async (req, res) => {
+  try {
+    
+    console.log(req.params);
 
-//     //buscar el producto en la BD
-//     const productoEncontrado = await Producto.findById(req.params.id);
+    const recetaEncontrada = await Receta.findById(req.params.id);
 
-//     //responder con el producto
-//     res.status(200).json(productoEncontrado);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(400).json({
-//       mensage: "El producto no se encontro",
-//     });
-//   }
-// };
+    res.status(200).json(recetaEncontrada);
+  } catch (error) {
+    console.error(error);
+    res.status(404).json({
+      mensage: "No se encontro la receta (Error 404)",
+    });
+  }
+};
 
 // export const listarProductosPorInfusion = async (req, res) => {
 //   try {
