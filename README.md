@@ -1,6 +1,6 @@
 # Backend de Rolling Recetas <>
 
-En este repositorio está almacenado toda la logica del backend del proyecto rolling recetas, este está almacenado en Vercel:
+En este repositorio está almacenado toda la logica del backend del proyecto rolling recetas:
 <br/>
 <a href="https://github.com/mauroarms/backendRollingRecetas">
     <img src="https://img.shields.io/badge/rolling recetas-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" width="160" height="30">
