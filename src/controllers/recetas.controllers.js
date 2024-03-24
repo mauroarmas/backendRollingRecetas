@@ -66,16 +66,16 @@ export const editarReceta = async (req, res) => {
   }
 };
 
-// export const borrarProductoPorId = async (req, res) => {
-//   try {
-//     const productoEncontrado = await Producto.findById(req.params.id);
-//     if (!productoEncontrado) {
-//       return res.status(404).json({ message: "Producto no encontrado" });
-//     }
-//     await Producto.findByIdAndDelete(req.params.id, req.body);
-//     res.status(200).json({ message: "Producto Borrado" });
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ message: "Ocurrio un error al editar el producto" });
-//   }
-// };
+export const eliminarReceta = async (req, res) => {
+  try {
+    const recetaEncontrada = await Receta.findById(req.params.id);
+    if (!recetaEncontrada) {
+      return res.status(404).json({ mensage: "No se encontro la receta (Error 404)" });
+    }
+    await Receta.findByIdAndDelete(req.params.id, req.body);
+    res.status(200).json({ mensage: "Receta Borrada" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Ocurrio un error al eliminar la receta" });
+  }
+};
